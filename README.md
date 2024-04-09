@@ -1,0 +1,2 @@
+# CUGThesis
+基于benmyb/CUGThesis进行的修改能够在Overleaf中使用，并上传至Overleaf gallery
