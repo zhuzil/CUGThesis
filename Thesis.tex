@@ -1,0 +1,125 @@
+%!TEX TS-program = xelatex
+% vim: set fenc=utf-8
+
+% -*- coding: UTF-8; -*-
+%!TEX encoding = UTF-8
+\documentclass[twoside]{CUGThesis}
+
+\title{论文题目} %论文题目
+\author{姓名} %作者姓名
+\date{\today} %日期，默认当日
+\school{学院} %院系名称
+\classnum{专业} %专业
+\stunum {123321123} %学号
+\instructorone{姓名} %指导教师1姓名
+\instructoronelevel{副教授}
+% \instructortwo{某某} %指导教师2姓名
+% \instructortwolevel{副教授}
+
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\begin{document}
+	\maketitle
+	\makestatement
+	
+	\begin{cnabstract}{关键词；关键词；关键词；关键词}
+		摘要
+	\end{cnabstract}
+	
+	\begin{enabstract}{keyword; keyword; keyword; keyword}
+		abstract
+	\end{enabstract}
+	
+	\makeToc
+	
+	%---------------------------------------------开始正文---------------------------------------------
+	
+	%--------------------------------------------- 第一章 ---------------------------------------------
+	\begin{spacing}{2}
+		\section{第一章}
+	\end{spacing}
+	引言
+	\subsection{第一章第一小节}
+	第一小节，引用实例\cite{引用}，按照格式填写mybib.bib文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+	\subsection{第一章第二小节}
+	第二小节
+	\subsection{etc}
+	etc
+	
+	
+	%------------------------------------------- 第二章 ---------------------------------------------
+	\begin{spacing}{2}
+		\section{第二章}
+	\end{spacing}
+	第二章引言
+	\subsection{第二章第一小节}
+	第二章第一小节
+	\subsubsection{第二章第一小节第三级标题}
+	插图实例（图\ref{Fig:example}）
+	\begin{figure}[!t]
+		\centering
+		\includegraphics[scale=0.5]{Figures/example.jpg}
+		\caption{示例图}
+		\label{Fig:example}
+	\end{figure}
+	
+	
+	
+	%--------------------------------------------- 第三章 ---------------------------------------------
+	\begin{spacing}{2}
+		\section{第三章}
+	\end{spacing}
+	引言
+	\subsection{第三章第一小节}
+	开始列表
+	\begin{enumerate}
+		\item 条目1
+		
+		说明文字1
+		
+		\item 条目2
+		
+		说明文字2
+		
+		
+	\end{enumerate}
+	\subsection{第三章第二小节}
+	表示例（表\ref{Tab:test}）
+	\begin{table}[t]
+		\centering
+		\caption{表示例}
+		\label{Tab:test}
+		\scalebox{1.0}{
+			\begin{tabular}{ccc}
+				\toprule  %添加表格头部粗线
+				姓名& 学号& 性别\\
+				\midrule  %添加表格中横线
+				Steve Jobs& 001& Male\\
+				Bill Gates& 002& Female\\
+				\hline \hline
+			\end{tabular}
+		}
+		\vspace{10mm}
+	\end{table}
+	
+	
+	%---------------------------------------------  致谢  ---------------------------------------------
+	\begin{spacing}{2}
+		\section*{致谢}
+	\end{spacing}
+	\phantomsection
+	\addcontentsline{toc}{section}{致谢}
+	
+	致谢
+	
+	\clearpage
+	%---------------------------------------------参考文献---------------------------------------------
+	
+	\bibliography{Bibs/mybib}
+	\phantomsection
+	\addcontentsline{toc}{section}{参考文献}
+	
+\end{document}
